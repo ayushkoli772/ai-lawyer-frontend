@@ -2,7 +2,7 @@
 
 import { ChatMessage } from "humanloop";
 import * as React from "react";
-import Link from 'next/link';
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
 const { useState } = React;
@@ -38,7 +38,6 @@ export default function Home() {
     const assistantMessage: ChatMessage = {
       role: "assistant",
       content: res,
-    
     };
     setMessages([...newMessages, assistantMessage]);
   };
@@ -65,12 +64,12 @@ export default function Home() {
             ))}
           </div>
         </div>
-  
+
         {/* User input area */}
         <div className="w-full fixed bottom-4 left-0 right-0 flex justify-center">
-          <div className="w-full max-w-screen-md bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg p-4 mx-4 flex items-center">
+          <div className="w-full max-w-screen-md bg-white dark:bg-gray-700 dark:text-white border  border-gray-700 dark:border-gray-700 rounded-lg shadow-lg p-4 mx-4 flex items-center">
             <input
-              className="flex-grow bg-transparent px-4 py-2 text-gray-900 dark:text-gray-900 rounded-lg outline-none"
+              className="flex-grow bg-transparent px-4 py-2 text-white dark:text-white rounded-lg outline-none"
               type="text"
               placeholder="Type your message here..."
               aria-label="Prompt"
@@ -88,7 +87,6 @@ export default function Home() {
         </div>
       </main>
     </div>
-
   );
 }
 
